@@ -8,9 +8,11 @@
     <style></style>
   </head>
   <body>
-    <input id="a1" type="number" value="0" /> +
-    <input id="a2" type="number" value="0" /> =
-    <input id="'a3" disabled />
+    <input id="a1" type="number" value="" placeholder="add a number" /> +
+
+    <input id="a2" type="number" value="" /> =
+
+    <input id="'a3" value="0" disabled />
 
     <script>
       const a1 = document.querySelector("#a1");
@@ -20,8 +22,14 @@
       a1.addEventListener("input", (e) => {
         console.log("input changed");
 
-        const sum = parseFloat(a1.value) + parseFloat(a2.value);
+        const n1 = parseFloat(a1.value);
+        const n2 = !a2.value ? 0 : parseFloat(a2.value);
+
+        const sum = n1 + n2;
+        // const sum = parseFloat(a1.value) + parseFloat(a2.value);
         console.log(sum);
+
+        a3.value = sum;
       });
     </script>
   </body>
