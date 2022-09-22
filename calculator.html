@@ -32,6 +32,11 @@
         a3.value = sum;
       });
 
+      a1.addEventListener("keydown", (event) => {
+        console.log("key pressed is", event.key);
+        if (event.key === "Enter") a2.focus();
+      });
+
       a2.addEventListener("input", (e) => {
         console.log("input changed");
 
