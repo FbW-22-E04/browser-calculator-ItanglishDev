@@ -26,7 +26,20 @@
         const n2 = !a2.value ? 0 : parseFloat(a2.value);
 
         const sum = n1 + n2;
-        // const sum = parseFloat(a1.value) + parseFloat(a2.value);
+        const sum = parseFloat(a1.value) + parseFloat(a2.value);
+        console.log(sum);
+
+        a3.value = sum;
+      });
+
+      a1.addEventListener("input", (e) => {
+        console.log("input changed");
+
+        const n1 = parseFloat(a1.value);
+        const n2 = !a2.value ? 0 : parseFloat(a2.value);
+
+        const sum = n1 + n2;
+        const sum = parseFloat(a1.value) + parseFloat(a2.value);
         console.log(sum);
 
         a3.value = sum;
