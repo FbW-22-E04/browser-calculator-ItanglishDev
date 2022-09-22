@@ -20,7 +20,8 @@
       a1.addEventListener("input", (e) => {
         console.log("input changed");
 
-        const sum = a1.value + a2.value;
+        const sum = parseFloat(a1.value) + parseFloat(a2.value);
+        console.log(sum);
       });
     </script>
   </body>
